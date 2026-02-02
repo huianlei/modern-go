@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"sort"
 
-	"github.com/funbytes/modern-go/internal/rwmutex"
+	"github.com/huianlei/modern-go/internal/rwmutex"
 )
 
 // Array is a golang array with rich features.

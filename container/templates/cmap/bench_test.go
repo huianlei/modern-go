@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/funbytes/modern-go/crypto"
+	"github.com/huianlei/modern-go/crypto"
 )
 
 func BenchmarkHashFnvNew32(b *testing.B) {

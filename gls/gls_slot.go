@@ -14,7 +14,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/funbytes/modern-go/gls/g"
+	"github.com/huianlei/modern-go/gls/g"
 )
 
 const shardsCount = 31

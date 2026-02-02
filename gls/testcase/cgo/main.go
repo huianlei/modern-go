@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/funbytes/modern-go/gls"
+	"github.com/huianlei/modern-go/gls"
 )
 
 func main() {

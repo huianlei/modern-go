@@ -3,7 +3,7 @@ package gls
 import (
 	"unsafe"
 
-	"github.com/funbytes/modern-go/gls/g"
+	"github.com/huianlei/modern-go/gls/g"
 )
 
 func SetErrorLog(l func(string)) {
