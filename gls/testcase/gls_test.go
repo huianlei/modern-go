@@ -14,7 +14,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/huianlei/modern-go/gls"
+	"github.com/funbytes/modern-go/gls"
 )
 
 type tlsKey1 struct{}

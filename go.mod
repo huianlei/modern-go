@@ -1,4 +1,4 @@
-module github.com/huianlei/modern-go
+module github.com/funbytes/modern-go
 
 go 1.22
 

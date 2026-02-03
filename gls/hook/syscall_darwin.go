@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/huianlei/modern-go/gls/c"
+	"github.com/funbytes/modern-go/gls/c"
 )
 
 const (

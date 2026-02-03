@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/huianlei/modern-go/gls/g"
+	"github.com/funbytes/modern-go/gls/g"
 )
 
 var (
