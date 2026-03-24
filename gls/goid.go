@@ -23,7 +23,7 @@ func init() {
 		}
 		panic(fmt.Sprintf("init routine failed, cannot find g.%s, version=%s", f, runtime.Version()))
 	}
-	gt := reflect.TypeOf(g.G0())
+	gt := g.GT()
 	goidOffset = offset(gt, "goid")
 	labelsOffset = offset(gt, "labels")
 	statusOffset = offset(gt, "atomicstatus")

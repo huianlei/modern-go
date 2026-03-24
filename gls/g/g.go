@@ -9,21 +9,24 @@ import (
 	"unsafe"
 )
 
-// g0 the value of runtime.g0.
-//
-//go:linkname g0 runtime.g0
-var g0 struct{}
-
 // getgp returns the pointer to the current runtime.g.
 //
 //go:nosplit
 func getgp() unsafe.Pointer
 
-// getg0 returns the value of runtime.g0.
+// getg0 returns an interface to a g struct.
+// It uses the current goroutine's g to provide the type information.
 //
 //go:nosplit
 func getg0() interface{} {
-	return packEface(getgt(), unsafe.Pointer(&g0))
+	return packEface(getgt(), getgp())
+}
+
+// GT returns the type of runtime.g.
+//
+//go:nosplit
+func GT() reflect.Type {
+	return getgt()
 }
 
 // getgt returns the type of runtime.g.
@@ -40,7 +43,9 @@ func G() unsafe.Pointer {
 	return getgp()
 }
 
-// G0 returns the g0, the main goroutine.
+// G0 returns the g0 (main goroutine) or the current goroutine as an interface.
+// In newer Go versions, it returns the current goroutine to avoid linker errors
+// while still providing the correct type information for reflect.
 //
 //go:nosplit
 func G0() interface{} {
